@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<!--    Patient Tree View-->
+    <!--    Patient Tree View-->
     <record id="view_hospital_patient_tree" model="ir.ui.view">
         <field name="name">hospital.patient.tree</field>
         <field name="model">hospital.patient</field>
@@ -14,7 +14,7 @@
         </field>
     </record>
 
-<!--    Patient Form View-->
+    <!--    Patient Form View-->
     <record id="view_hospital_patient_form" model="ir.ui.view">
         <field name="name">hospital.patient.form</field>
         <field name="model">hospital.patient</field>
@@ -38,13 +38,14 @@
         </field>
     </record>
 
-<!--    Patient Search View-->
+    <!--    Patient Search View-->
     <record id="view_hospital_patient_search" model="ir.ui.view">
         <field name="name">hospital.patient.search</field>
         <field name="model">hospital.patient</field>
         <field name="arch" type="xml">
             <search>
-                <field name="name" string="Patient Name" filter_domain="['|', ('name','ilike',self), ('ref','ilike',self)]"/>
+                <field name="name" string="Patient Name"
+                       filter_domain="['|', ('name','ilike',self), ('ref','ilike',self)]"/>
                 <field name="ref"/>
                 <field name="age"/>
                 <field name="gender"/>
@@ -56,15 +57,15 @@
                 <separator/>
                 <filter name="filter_archived" string="Archived" domain="[('active', '=', 'False')]"/>
 
-                <group  expand="0" string="Group By">
-                        <filter string="Gender" name="group_by_gender"
-                            context="{'group_by':'gender'}" />
-                    </group>
+                <group expand="0" string="Group By">
+                    <filter string="Gender" name="group_by_gender"
+                            context="{'group_by':'gender'}"/>
+                </group>
             </search>
         </field>
     </record>
 
-<!--    Patient Action-->
+    <!--    Patient Action-->
     <record id="action_hospital_patient" model="ir.actions.act_window">
         <field name="name">Patients</field>
         <field name="type">ir.actions.act_window</field>
@@ -78,7 +79,7 @@
         </field>
     </record>
 
-<!--    Patient Submenu-->
+    <!--    Patient Submenu-->
     <menuitem
             id="menu_patient"
             name="Patient"
