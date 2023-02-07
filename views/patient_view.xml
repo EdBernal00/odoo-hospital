@@ -68,6 +68,10 @@
                     <filter string="Gender" name="group_by_gender"
                             context="{'group_by':'gender'}"/>
                 </group>
+
+                <searchpanel>
+                    <field name="gender" icon="fa-users" enable_counters="1" select="multi"/>
+                </searchpanel>
             </search>
         </field>
     </record>
