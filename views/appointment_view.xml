@@ -61,7 +61,7 @@
     <!--    Appointment Submenu-->
     <menuitem
             id="menu_appointment"
-            name="Appointment"
+            name="Appointments"
             action="action_hospital_appointment"
             parent="menu_appointment_master"
             sequence="0"
