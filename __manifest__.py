@@ -6,7 +6,7 @@
     'name': 'Hospital Management',
     'version': '1.0.0',
     'category': 'Hospital',
-    'author': 'Eddy Daniel',
+    'author': 'Eddy Bernal',
     'sequence': -100,
     'summary': 'Hospital management system',
     'description': """Hospital management system.""",
