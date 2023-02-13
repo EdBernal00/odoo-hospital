@@ -40,8 +40,12 @@
 
                         <group>
                             <field name="appointment_time"/>
-                            <button name="action_test" string="Object Button" type="object" class="oe_highlight"/>
+                            <button name="action_test" string="Object Button" type="object"
+                                    confirm="Are you sure to execute Python code?"
+                                    class="oe_highlight"/>
+                            
                             <button name="%(odoo-hospital.action_hospital_patient)d" string="Action Button"
+                                    confirm="Are you sure to open the patient action?"
                                     type="action" class="oe_highlight"/>
                         </group>
                     </group>
