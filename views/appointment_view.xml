@@ -40,6 +40,9 @@
 
                         <group>
                             <field name="appointment_time"/>
+                            <button name="action_test" string="Object Button" type="object" class="oe_highlight"/>
+                            <button name="%(odoo-hospital.action_hospital_patient)d" string="Action Button"
+                                    type="action" class="oe_highlight"/>
                         </group>
                     </group>
 
