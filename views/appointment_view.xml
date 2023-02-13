@@ -20,8 +20,9 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                        <field name="state" widget="statusbar" nolabel="1" options="{'clickable': '1'}" statusbar_visible="draft,in_consultation,done"/>
-                    </header>
+                    <field name="state" widget="statusbar" nolabel="1" options="{'clickable': '1'}"
+                           statusbar_visible="draft,in_consultation,done"/>
+                </header>
 
                 <sheet>
                     <div>
@@ -43,7 +44,7 @@
                             <button name="action_test" string="Object Button" type="object"
                                     confirm="Are you sure to execute Python code?"
                                     class="oe_highlight"/>
-                            
+
                             <button name="%(odoo-hospital.action_hospital_patient)d" string="Action Button"
                                     confirm="Are you sure to open the patient action?"
                                     type="action" class="oe_highlight"/>

@@ -61,8 +61,8 @@
 
                 <filter name="filter_male" string="Male" domain="[('gender', '=', 'male')]"/>
                 <filter name="filter_female" string="Female" domain="[('gender', '=', 'female')]"/>
-<!--                <separator/>-->
-<!--                <filter name="filter_kids" string="Kids" domain="[('age', '&lt;=', '18')]"/>-->
+                <!--                <separator/>-->
+                <!--                <filter name="filter_kids" string="Kids" domain="[('age', '&lt;=', '18')]"/>-->
                 <separator/>
                 <filter name="filter_archived" string="Archived" domain="[('active', '=', 'False')]"/>
 
