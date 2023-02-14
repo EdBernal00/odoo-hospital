@@ -31,13 +31,13 @@
             <form>
                 <header>
                     <button name="action_in_consultation" string="In Consultation" type="object" class="oe_highlight"
-                            states="draft"/>
+                            states="draft" data-hotkey="i"/>
                     <button name="action_done" string="Mark As Done" type="object" class="oe_highlight"
-                            states="in_consultation"/>
+                            states="in_consultation" data-hotkey="v"/>
                     <button name="action_cancelled" string="Cancel" type="object"
-                            states="draft,in_consultation"/>
+                            states="draft,in_consultation" data-hotkey="z"/>
                     <button name="action_draft" string="Reset to Draft" type="object" class="oe_highlight"
-                            states="cancelled"/>
+                            states="cancelled" data-hotkey="r"/>
 
                     <field name="state" widget="statusbar" nolabel="1"
                            statusbar_visible="draft,in_consultation,done"/>
