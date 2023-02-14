@@ -24,7 +24,7 @@ class HospitalAppointment(models.Model):
         ('draft', 'Draft'),
         ('in_consultation', 'In Consultation'),
         ('done', 'Done'),
-        ('cancel', 'Cancelled')], default='draft', string='Status', required=True)
+        ('cancelled', 'Cancelled')], default='draft', string='Status', required=True)
 
     @api.onchange('patient_id')
     def onchange_patient_id(self):
