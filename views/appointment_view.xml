@@ -55,8 +55,13 @@
                             states="draft" data-hotkey="i"/>
                     <button name="action_done" string="Mark As Done" type="object" class="oe_highlight"
                             states="in_consultation" data-hotkey="v"/>
+
+<!--                    <button name="%(odoo-hospital.action_cancel_appointment)d" string="Cancel" type="action"-->
+<!--                            states="draft,in_consultation" data-hotkey="z"/>-->
+
                     <button name="action_cancelled" string="Cancel" type="object"
                             states="draft,in_consultation" data-hotkey="z"/>
+
                     <button name="action_draft" string="Reset to Draft" type="object" class="oe_highlight"
                             states="cancelled" data-hotkey="r"/>
 
