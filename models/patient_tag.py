@@ -10,4 +10,3 @@ class HospitalPatient(models.Model):
     active = fields.Boolean(string='Active', default=True)
     color = fields.Integer(string='Color')
     color_2 = fields.Char(string='Color 2')
-

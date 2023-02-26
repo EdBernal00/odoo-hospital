@@ -22,7 +22,7 @@ class HospitalPatient(models.Model):
     def create(self, vals):
         vals['ref'] = self.env['ir.sequence'].next_by_code('hospital.patient')
         return super(HospitalPatient, self).create(vals)
-    
+
     def write(self, vals):
         if not self.ref and not vals.get('ref'):
             vals['ref'] = self.env['ir.sequence'].next_by_code('hospital.patient')
@@ -40,12 +40,10 @@ class HospitalPatient(models.Model):
                 rec.age = 0
 
     def name_get(self):
-        patient_list=[]
+        patient_list = []
 
         for record in self:
             name = record.ref + ' ' + record.name
             patient_list.append((record.id, name))
 
         return patient_list
-
-
