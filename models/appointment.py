@@ -6,7 +6,7 @@ class HospitalAppointment(models.Model):
     _name = "hospital.appointment"
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Hospital Appointment "
-    _rec_name = 'ref'
+    _rec_name = 'sequence'
 
     patient_id = fields.Many2one(comodel_name='hospital.patient', string='Patient')
     gender = fields.Selection(related='patient_id.gender')
@@ -28,6 +28,18 @@ class HospitalAppointment(models.Model):
     doctor_id = fields.Many2one(comodel_name='res.users', string='Doctor', tracking=True)
     pharmacy_line_ids = fields.One2many('appointment.pharmacy.lines', 'appointment_id', string='Pharmacy Lines')
     hide_price = fields.Boolean(string='Hide Price')
+    sequence = fields.Char(string='Sequence')
+
+    @api.model
+    def create(self, vals):
+        vals['sequence'] = self.env['ir.sequence'].next_by_code('hospital.appointment')
+        return super(HospitalAppointment, self).create(vals)
+
+    def write(self, vals):
+        if not self.sequence and not vals.get('sequence'):
+            vals['sequence'] = self.env['ir.sequence'].next_by_code('hospital.appointment')
+
+        return super(HospitalAppointment, self).write(vals)
 
     @api.onchange('patient_id')
     def onchange_patient_id(self):

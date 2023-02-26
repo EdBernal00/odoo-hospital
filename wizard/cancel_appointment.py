@@ -9,6 +9,7 @@ class CancelAppointmentWizard(models.TransientModel):
     @api.model
     def default_get(self, fields):
         res = super(CancelAppointmentWizard, self).default_get(fields)
+        res['appointment_id'] = self.env.context.get('active_id')
         return res
 
     appointment_id = fields.Many2one('hospital.appointment', string='Appointment')
